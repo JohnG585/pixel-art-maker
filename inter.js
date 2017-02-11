@@ -97,7 +97,6 @@ colorHeading.classList = "colorHeading"
 var num = 2048;
 var container = document.getElementsByClassName('container');
 
-
 var paintbrush = function(color_div) {
    color_div.classList.remove(color_div.classList.item(1));
    color_div.classList.add();
@@ -116,21 +115,35 @@ for (i=0; i<num; i++) {
 }
 }
  var clickPaint = function takePaint() {
-   var takeColor = document.querySelector('colors');
+  var takeColor = document.querySelector('colors');
 
-var palette = ['darkGreen', 'dodgerBlue', "lawnGreen", 'mediumBlue', 'orange', 'purple', 'saddleBrown', 'yellow', 'tan', 'red', 'maroon', 'lightSlateGray', 'deepPink', 'chocolate', 'black', 'plum', 'teal', 'turquoise','tomato', 'oliveDrab', 'lime', 'indianRed', 'fireBrick', 'darkSlateGray', 'darkGoldenRod', 'beige'];
-
-for (i=0; i<palette.length; i++) {
+var palette = ['red', 'green', 'blue', 'orange', 'yellow',
+'darkGreen', 'dodgerBlue', "lawnGreen", 'mediumBlue', 'purple', 'saddleBrown', 'yellow', 'tan', 'maroon', 'deepPink', 'chocolate', 'black', 'plum', 'teal', 'turquoise','tomato', 'oliveDrab', 'lime', 'indianRed', 'fireBrick', 'darkSlateGray', 'darkGoldenRod', 'beige'];
 
   //********************* for the palette. First part: creating divs  *********
+  var grid = document.getElementsByClassName('grid');
   var colors = document.getElementById('colors');
-  var color_div = document.createElement('div');
-  color_div.className = 'colors';
-  colors.appendChild(color_div);
-  palette[i] += colors;
-}
+  for (j=0; j<palette.length; j++) {
+    var color_div = document.createElement('div');
+    color_div.className = 'colors';
+    color_div.style.backgroundColor = palette[j];
+    colors.appendChild(color_div);
+  }
+firstDiv.addEventListener('click', function() {
+  if (event.target === this) {}
+  else {
+    event.target.style.backgroundColor = ;
+  }
+})
+colors.addEventListener('click', function() {
 
+})
+start.addEventListener('click', function() {
+  if (event.target === this) {
+    grid.style.backgroundColor = 'grey';
+  }
 
+})
 }
 drawing();
 clickPaint();

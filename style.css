@@ -2,10 +2,11 @@
   border: 1px solid gainsboro;
   width: 14px;
   height: 14px;
-  display: inline-table;
-  padding-bottom: 1px;
-  z-index: 2;
-  position: relative;
+  display: inline-block;
+  /*padding-bottom: 1px;*/
+  /*z-index: 2;*/
+  /*position: relative;*/
+  float: left;
 }
 
 main {
@@ -19,13 +20,14 @@ main {
   padding-left: 50px;
   background-color: grey;
   padding-top: 10px;
+  padding-bottom: 480px;
 }
 
 div {
   margin: -1px;
 }
 .colors {
-  border: 2px dashed gainsboro;
+  border: .5px dashed black;
   width: 20px;
   height: 20px;
   position: relative;
@@ -64,7 +66,10 @@ body {
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-bottom-right-radius: 100px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   background-color: "HoneyDew";
+  margin-left: 50px;
 }
 
 .battery {
