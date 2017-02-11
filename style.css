@@ -1,0 +1,44 @@
+.grid {
+  border: 1px solid gainsboro;
+  width: 14px;
+  height: 14px;
+  display: inline-table;
+  padding-bottom: 1px;
+  z-index: 2;
+  position: relative;
+}
+
+main {
+  margin: 0 0 0 200px;
+  padding: 20px;
+  width: 800px;
+  position:relative;
+}
+
+div {
+  margin: -1px;
+}
+.colors {
+  border: 2px dashed gainsboro;
+  width: 20px;
+  height: 20px;
+  top: 0%;
+  left:0%;
+  display: inline-table;
+  border-radius: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.blackDye {
+  background-color: black;
+}
+
+.head {
+  font-family:'Press Start 2P', cursive;
+  font-size: 100px;
+  text-align: center;
+}
+
+.black-paint {
+  background-color: black;
+}
