@@ -115,7 +115,6 @@ for (i=0; i<num; i++) {
 }
 }
  var clickPaint = function takePaint() {
-  var takeColor = document.querySelector('colors');
 
 var palette = ['red', 'green', 'blue', 'orange', 'yellow',
 'darkGreen', 'dodgerBlue', "lawnGreen", 'mediumBlue', 'purple', 'saddleBrown', 'yellow', 'tan', 'maroon', 'deepPink', 'chocolate', 'black', 'plum', 'teal', 'turquoise','tomato', 'oliveDrab', 'lime', 'indianRed', 'fireBrick', 'darkSlateGray', 'darkGoldenRod', 'beige'];
@@ -129,20 +128,29 @@ var palette = ['red', 'green', 'blue', 'orange', 'yellow',
     color_div.style.backgroundColor = palette[j];
     colors.appendChild(color_div);
   }
-firstDiv.addEventListener('click', function() {
-  if (event.target === this) {}
+// firstDiv.addEventListener('click', function() {
+//   if (event.target === this) {}
+//   else {
+//     event.target.style.backgroundColor = 'red';
+//   }
+// })
+// var clickerColor = document.createElement('div');
+// clickerColor.classList = "brush";
+var clickerColor = document.createElement('div');
+// clickerColor.classList = "brush";
+clickerColor.style.backgroundColor = '';
+
+colors.addEventListener('click', function(event) {
+    clickerColor.style.backgroundColor = event.target.style.backgroundColor;
+})
+firstDiv.addEventListener('click', function(event) {
+  if (clickerColor.classList === "colors") {}
   else {
-    event.target.style.backgroundColor = ;
+    event.target.style.backgroundColor = clickerColor.style.backgroundColor;
   }
 })
-colors.addEventListener('click', function() {
-
-})
-start.addEventListener('click', function() {
-  if (event.target === this) {
-    grid.style.backgroundColor = 'grey';
-  }
-
+start.addEventListener('click', function(event) {
+  firstDiv.style.backgroundColor = 'grey';
 })
 }
 drawing();
