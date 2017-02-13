@@ -97,11 +97,6 @@ colorHeading.classList = "colorHeading"
 var num = 2048;
 var container = document.getElementsByClassName('container');
 
-var paintbrush = function(color_div) {
-   color_div.classList.remove(color_div.classList.item(1));
-   color_div.classList.add();
- }
-
 var drawing = function() {
 for (i=0; i<num; i++) {
   var div = document.createElement('div');
@@ -144,14 +139,13 @@ colors.addEventListener('click', function(event) {
     clickerColor.style.backgroundColor = event.target.style.backgroundColor;
 })
 firstDiv.addEventListener('click', function(event) {
-  if (clickerColor.classList === "colors") {}
+  if (event.target.className === "battery") {}
+  else if (event.target.id === "firstDiv"){}
   else {
     event.target.style.backgroundColor = clickerColor.style.backgroundColor;
   }
 })
-start.addEventListener('click', function(event) {
-  firstDiv.style.backgroundColor = 'grey';
-})
+
 }
 drawing();
 clickPaint();
